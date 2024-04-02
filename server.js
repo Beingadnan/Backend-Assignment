@@ -271,16 +271,16 @@ router.get('/books', function(req, res) {
   const {name}=req.query
   for(let i=0;i<books.length;i++){
     if(books[i].name==name){
-      return res.send(books[i])
+      return res.send({status:"ok",message:books[i]})
      }
   }
-   return res.send(books);
+   return res.send({status:'ok',message:books});
 });
 router.get('/movies', function(req, res) {
   let {name}=req.query;
   for(let i=0;i<movies.length;i++){
     if(movies[i].name==name){
-      res.send(movies[i])
+      res.send({status:"ok",message:movies[i]})
     }
   }
     res.send(movies);
