@@ -284,7 +284,6 @@ router.get('/movies', function(req, res) {
     }
   }
     res.send(movies);
-    
 });
 
 app.use('/',router);
